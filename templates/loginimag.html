@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='images/logo.png') }}" type="image/png">
+    <title>GPA | Login</title>
+    <link rel="stylesheet" href="{{url_for('.static',filename='style.css')}}">
+</head>
+
+<body>
+    <h2 class="title">Select the 3 points in Order over the Image </h2>
+
+    <img id="h" onclick="clickHotspotImage(event);" name="hotspot_image" style="width: 50%; max-width: 800px;"
+        src="data:{{ imga.mime }};base64,{{ image_data_base64 }}" alt="Hotspot image" />
+    <form action="/home" method="post" id="pass">
+        <h2 id="ct" class="point">0</h2>
+        <input style="display: none;" type="text" name="passxy" id="inp">
+        <button id="sub" type="submit" class="button2">Submit</button>
+    </form>
+</body>
+<script>
+   var n = 1
+    var count = 0;
+    var xy = document.getElementById("inp");
+    var xymail = document.getElementById("umail");
+    function clickHotspotImage(event) {
+        var xCoordinate = event.offsetX;
+        var yCoordinate = event.offsetY;
+        
+        count=count +1;
+        if (n <= 3) {
+            xy.value = xy.value + xCoordinate + ' ' + yCoordinate + " ";
+            n = n + 1;
+            document.getElementById("ct").innerHTML=n-1
+        }
+    
+        if (n > 3) {
+            document.getElementById("h").classList.add("a");
+
+        }
+
+
+    }
+</script>
+<script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+
+</html>

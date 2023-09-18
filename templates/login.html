@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('.static',filename='css/styles.css')}}">
+    <link rel="icon" href="{{ url_for('static', filename='images/logo.png') }}" type="image/png">
+    <title>GPA | Login</title>
+</head>
+
+<body>
+    <div class="bgimg"></div>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row topp">
+                <div class="col-lg-6 mx-auto">
+                    <div class="box auth-box" id="diiiv1">
+                    <!-- ////////////////////////diiiv1 start/////////////////////// -->
+                    <div class="box" id="diiiv1">
+                        <div class="loader" style="display:none;">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                        <form action="/login" method="post">
+                            <div class="boxtext">
+                                <img src="static/images/logo.png" class="img-fluid logoimg" width="30px">
+                                &nbsp<span class="align-middle h5 logoname" style="color: #747474;"> GPA </span><br><br>
+                                <span class="h5">Login</span><br>
+                                <span id="error" class="text-danger" style="display: none;">Email doesn't match. Try
+                                    another </span>
+                                <div class="form-group mt-2">
+                                    <input type="email" id="mail" name="ur_email" value=""
+                                        class="form-control rounded-0 border-dark" aria-describedby="aiHelp"
+                                        placeholder="Email" style="border-right: none;border-left: none;border-top: none;">
+                                </div>
+                                <div id="error" class="text-danger" style="display: none;">Email doesn't match. Try
+                                    another </div>
+
+                                <p style="font-size: 13px">Don't have an account yet? <a href="/signup">Sign up
+                                        now!</a></p>
+                                <div class="text-right">
+                                    <button type="submit" class="btn rounded-0 text-white px-4" id="submit"
+                                        style="background-color: #0066BA;cursor: pointer;">Next</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            // Get the email input field
+            var emailInput = $("#mail");
+    
+            // Get the error message div
+            var errorDiv = $("#error");
+    
+            // Add an event listener to the form submission
+            $("form").submit(function(e) {
+                // Check if the email is incorrect (you can modify this condition as needed)
+                if (!isValidEmail(emailInput.val())) {
+                    // Display the error message
+                    errorDiv.css("display", "block");
+                    e.preventDefault(); // Prevent form submission
+                }
+            });
+    
+            // Function to validate email (you can use your own validation logic)
+            function isValidEmail(email) {
+                // This is a simple example. You should use a more comprehensive email validation method.
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+        });
+    </script>
+    
+</body>
+
+</html>

