@@ -1,71 +1,90 @@
+```markdown
 # Image-Based Graphical Password Authentication System
 
-Secure and user-friendly authentication system using Flask, PostgreSQL, and image-based graphical passwords.
+![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Introduction
 
-In today's digital landscape, the security of user accounts and data is of paramount importance. This project presents a secure image upload and authentication system, leveraging the Flask framework. This authentication approach uses image coordinates instead of traditional text-based passwords to enhance security and user experience.
+In today's digital landscape, the security of user accounts and data is of paramount importance. The Image-Based Graphical Password Authentication System is designed to provide a secure and user-friendly authentication method using Flask, PostgreSQL, and image-based graphical passwords.
 
-Key features of this system include:
+Key Features:
 
-- Secure image uploads with PostgreSQL storage.
-- Image-coordinate-based authentication for improved security.
-- User-friendly authentication method, reducing the need for complex passwords.
+- Secure image uploads and storage with PostgreSQL.
+- Image-coordinate-based authentication for enhanced security.
+- User-friendly authentication process, reducing the need for complex passwords.
 - Robust security measures to protect user data.
 
 ## Getting Started
 
 Follow these steps to set up and run the system locally:
 
-1. Clone the repository:
+1. **Clone the repository:**
 
    ```bash
    git clone https://github.com/imonishkumar/Graphical_Password_Authentication_system_using_flask
    cd Graphical_Password_Authentication_system_using_flask
    ```
 
-2. Install dependencies:
+2. **Install Dependencies:**
 
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Set up a PostgreSQL database. Update the database configuration in `app.py`:
+3. **Set Up the PostgreSQL Database:**
 
-   ```python
-   app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://username:password@localhost/database_name'
-   ```
+   - Configure the database connection in `app.py`:
 
-4. Initialize the database:
+     ```python
+     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://username:password@localhost/database_name'
+     ```
 
-   ```bash
-   flask db init
-   flask db migrate
-   flask db upgrade
-   ```
+   - Initialize and upgrade the database:
 
-5. Run the Flask application:
+     ```bash
+     flask db init
+     flask db migrate
+     flask db upgrade
+     ```
+
+4. **Run the Flask Application:**
 
    ```bash
    flask run
    ```
 
-6. Access the application in your web browser at `http://localhost:5000`.
+5. **Access the Application:**
+
+   Open your web browser and visit http://localhost:5000 to use the application.
 
 ## Usage
 
-1. Register an account by providing a username, email, and uploading an image.
-2. During registration, select specific image coordinates to create a unique authentication pattern.
-3. Log in using your email, and you'll be prompted to enter the coordinates based on your predefined pattern.
-4. The system will authenticate you based on the entered coordinates.
+1. **User Registration:**
+
+   - Register an account by providing a username, email, and uploading an image.
+   - During registration, select specific image coordinates to create a unique authentication pattern.
+
+2. **Login and Authentication:**
+
+   - Log in using your registered email.
+   - You'll be prompted to enter the image coordinates based on your predefined pattern.
+   - The system will authenticate you based on the entered coordinates.
 
 ## Security Measures
 
-This system employs several security measures:
+This system incorporates several security measures:
 
-- Image data is securely stored as binary data, reducing the risk of unauthorized access.
-- A tolerance range is used during authentication to account for small variations.
-- The image-coordinate pattern is unique to each user, making it challenging for attackers to replicate.
+- Secure storage of image data as binary, reducing the risk of unauthorized access.
+- Tolerance range during authentication to account for small variations.
+- Unique image-coordinate pattern for each user, making replication difficult for attackers.
+
+## Password Reset Functionality
+
+The system also provides a password reset feature:
+
+- Users can request a password reset link via email.
+- Password reset links are valid for a limited time.
+- The system sends a link to the user's email address for resetting their password.
 
 ## Contributing
 
@@ -77,7 +96,9 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-For questions or collaboration opportunities, feel free to contact us at monishkumarpecai@gmail.com
+For questions or collaboration opportunities, feel free to contact us at monishkumarpecai@gmail.com.
 
+---
+
+*Note: Replace `username:password@localhost/database_name` in the database configuration with your actual database credentials.*
 ```
-
