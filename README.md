@@ -1,4 +1,3 @@
-```markdown
 # Image-Based Graphical Password Authentication System
 
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
