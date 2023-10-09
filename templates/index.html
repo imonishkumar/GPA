@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='images/logo.png') }}" type="image/png">
+    <title>GPA | Home</title>
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="header-blue">
+        <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
+            <div class="container">
+                <img src="static/images/logo.png" class="img-fluid logoimg" width="25px">
+                <a class="navbar-brand"></a><a class="navbar-brand" href="/">GPA</a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item" role="presentation"><a class="nav-link active" href="https://github.com/imonishkumar/Graphical_Password_Authentication_system_using_flask">GitHub</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">More</a>
+                            <div class="dropdown-menu" role="menu">
+                                <a class="dropdown-item" role="presentation" href="/help">Help</a>
+                                <a class="dropdown-item" role="presentation" href="/">About Us</a>
+                                <a class="dropdown-item" role="presentation" href="/">Contact Us</a>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <form class="form-inline mr-auto" target="_self"> 
+                        <div class="form-group">
+                            <label for="search-field"><i class="fa fa-search"></i></label>
+                            <input class="form-control search-field" type="search" name="search" id="search-field">
+                        </div>
+                    </form>
+                    <span class="navbar-text">
+                        <a href="/login" class="login">Sign In</a>
+                    </span>
+                    <a class="btn btn-light action-button" role="button" href="/signup">Sign Up</a>
+                    <div class="navbar">
+                      
+                    </div>
+                    
+                </div>
+            </div>
+        </nav>
+        <div class="container hero">
+            <div class="row">
+                <div class="col-12 col-lg-6 col-xl-8 offset-xl-2">
+                    <h1>Graphical Password Authentication system</h1>
+                    <p>In today's digital landscape, the security of user accounts and data is of paramount importance. This project presents a secure image upload and authentication system, leveraging the Flask framework. This authentication approach uses image coordinates instead of traditional text-based passwords to enhance security and user experience.</p>
+                    <a class="btn btn-light btn-lg action-button" href="/login">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- In your index.html template -->
+    
+    <footer class="relative bg-blueGray-200 pt-8 pb-6">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap text-left lg:text-left">
+            <div class="w-full lg:w-6/12 px-4">
+              <h4 class="text-3xl fonat-semibold text-blueGray-700">Let's keep in touch!</h4>
+              <h5 class="text-lg mt-0 mb-2 text-blueGray-600">
+              </h5>
+              <div class="mt-6 lg:mb-0 mb-6">
+                <!-- LinkedIn Button -->
+                <a href="https://www.linkedin.com/in/your-linkedin-profile">
+                    <button class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                        <i class="fab fa-linkedin"></i>
+                    </button>
+                </a>
+            
+                <!-- GitHub Button -->
+                <a href="https://github.com/imonishkumar">
+                    <button class="bg-white text-blue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                        <i class="fab fa-github"></i>
+                    </button>
+                </a>
+            
+                <!-- Facebook Button -->
+                <a href="https://www.facebook.com/your-facebook-profile">
+                    <button class="bg-white text-blue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                        <i class="fab fa-facebook-square"></i>
+                    </button>
+                </a>
+            </div>
+            
+            </div>
+            <div class="w-full lg:w-6/12 px-4">
+              <div class="flex flex-wrap items-top mb-6">
+                <div class="w-full lg:w-4/12 px-4 ml-auto">
+                  <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Useful Links</span>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="#">About Us</a>
+                    </li>
+                    <li>
+                      <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://github.com/imonishkumar">Github</a>
+                    </li>
+                    <li>
+                      <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="#"></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="w-full lg:w-4/12 px-4">
+                  <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Other Resources</span>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="#">Terms & Conditions</a>
+                    </li>
+                    <li>
+                      <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="#">Privacy Policy</a>
+                    </li>
+                    <li>
+                      <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="#">Contact Us</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="my-6 border-blueGray-300">
+          <div class="flex flex-wrap items-center md:justify-between justify-center">
+            <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+              <div class="text-sm text-blueGray-500 font-semibold py-1">
+                Copyright © <span id="get-current-year">2023</span><a href="https://www.creative-tim.com/product/notus-js" class="text-blueGray-500 hover:text-gray-800" target="_blank"> by
+                <a href="#" class="text-blueGray-500 hover:text-blueGray-800">imonishkumar</a>.
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+  
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

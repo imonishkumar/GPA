@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>GPA | Help Center</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/helpstyle.css') }}">
+  <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">
+  <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <style>
+    /* Additional CSS for header and navigation bar */
+    .header-blue {
+	margin-top: -12%;
+      padding: 10px;
+    }
+
+    .navbar {
+      background-color: #007BFF; /* Change to your desired background color */
+      color: #fff; /* Change text color if needed */
+    }
+
+    .navbar-brand {
+      font-size: 24px; /* Adjust the font size as needed */
+      font-weight: bold;
+    }
+
+    .navbar-toggler-icon {
+      background-color: #fff; /* Change color of the hamburger icon */
+    }
+
+    .nav-item {
+      margin-right: 20px; /* Adjust spacing between navigation items */
+    }
+
+    .login {
+      color: #fff; /* Change text color of login link */
+    }
+
+    .action-button {
+      background-color: #fff; /* Change background color of sign-up button */
+      color: #007BFF; /* Change text color of sign-up button */
+    }
+
+	
+  </style></head>
+
+<body>
+	<div style="width: 115%; margin-left: -108px; height: 20vh; margin-top: 100px; justify-content: center; align-items: center;">
+		<div style="width: 100%;" class="header-blue">
+		  <nav class="navbar navbar-expand-md navbar-dark navigation-clean-search">
+			<div class="container">
+			<img src="static/images/logo.png" class="img-fluid logoimg" width="25px">
+
+			  <a class="navbar-brand" href="/"> GPA</a>
+			  <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="navbar-toggler-icon"></span>
+			  </button>
+			  <a  style="margin-left: 38%; text-emphasis-color: black; " class="navbar-brand" href="">Help Center </a>
+
+			  <div class="collapse navbar-collapse" id="navcol-1">
+				<ul class="nav navbar-nav ml-auto">
+				  <li class="nav-item" role="presentation">
+					<a class="nav-link" href="https://github.com/imonishkumar/Graphical_Password_Authentication_system_using_flask">GitHub</a>
+				  </li>
+				</ul>
+				<span class="navbar-text">
+				  <a href="/login" class="login">Sign In</a>
+				</span>
+				<a class="btn btn-light action-button" role="button" href="/signup">Sign Up</a>
+			  </div>
+			</div>
+		  </nav>
+		</div>
+	  </div>
+	
+  <!-- Accordion for Sign Up -->
+  <div class="accordion js-accordion">
+    <div class="accordion__item js-accordion-item">
+      <div class="accordion-header js-accordion-header">
+        <i class="ion-android-person-add"></i> Sign Up
+      </div>
+      <div class="accordion-body js-accordion-body">
+        <div class="accordion-body__contents">
+          <p>Welcome to our platform! Follow these steps to create your account:</p>
+        </div>
+        <div class="accordion js-accordion">
+          <!-- Step 1: Getting Started -->
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">
+              <i class="ion-help-buoy"></i> Step 1: Getting Started
+            </div>
+            <div class="accordion-body js-accordion-body">
+              <div class="accordion-body__contents">
+                <p>To create a new account and start using our platform:</p>
+                <ul>
+                  <li>Visit our landing page by going to our website or app.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Providing Your Information -->
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">
+              <i class="ion-edit"></i> Step 2: Providing Your Information
+            </div>
+            <div class="accordion-body js-accordion-body">
+              <div class="accordion-body__contents">
+                <p>Once you're on the landing page:</p>
+                <ul>
+                  <li>Fill out the sign-up form with the following information:</li>
+                  <ul>
+                    <li>Username: Choose a unique username for your account.</li>
+                    <li>Email: Provide a valid email address that you have access to.</li>
+                    <li>Security Image: Choose any image to upload for added security.</li>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Accordion for Sign Up (continued) -->
+          <!-- Step 3: Moving Forward -->
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">
+              <i class="ion-arrow-right-b"></i> Step 3: Moving Forward
+            </div>
+            <div class="accordion-body js-accordion-body">
+              <div class="accordion-body__contents">
+                <p>After filling out the form, click the "Next" button. This will take you to the next step in the
+                  sign-up process.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4: Verifying Your Security Image -->
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">
+              <i class="ion-image"></i> Step 4: Verifying Your Security Image
+            </div>
+            <div class="accordion-body js-accordion-body">
+              <div class="accordion-body__contents">
+                <p>You'll now see the image you uploaded for security. Your task here is to select three specific points
+                  on this image, following a particular order. Make sure to remember the order in which you choose these
+                  points.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 5: Selecting Points -->
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">
+              <i class="ion-location"></i> Step 5: Selecting Points
+            </div>
+            <div class="accordion-body js-accordion-body">
+              <div class="accordion-body__contents">
+                <p>Click on the image at three different spots according to the order given. The system will display the
+                  coordinates of these points.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 6: Completing Your Account Setup -->
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">
+              <i class="ion-checkmark-circled"></i> Step 6: Completing Your Account Setup
+            </div>
+            <div class="accordion-body js-accordion-body">
+              <div class="accordion-body__contents">
+                <p>Once you've successfully selected three points, click the "Create" button. This action finalizes the
+                  creation of your account.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 7: Confirmation -->
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">
+              <i class="ion-ios-checkmark-circle-outline"></i> Step 7: Confirmation
+            </div>
+            <div class="accordion-body js-accordion-body">
+              <div class="accordion-body__contents">
+                <p>Congratulations! You'll receive a confirmation message indicating that your account has been
+                  successfully created.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 8: Access Your Account -->
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">
+              <i class="ion-log-in"></i> Step 8: Access Your Account
+            </div>
+            <div class="accordion-body js-accordion-body">
+              <div class="accordion-body__contents">
+                <p>You can now log in using your newly created account. Simply enter your username and password to
+                  access all the features and services on our platform.</p>
+              </div>
+            </div>
+          </div>
+        </div><!-- End of Sub Accordion -->
+      </div><!-- End of Accordion Body -->
+    </div><!-- End of Accordion Item -->
+    <div class="accordion__item js-accordion-item">
+      <div class="accordion-header js-accordion-header">
+        <i class="ion-log-in"></i> Login
+      </div>
+      <div class="accordion-body js-accordion-body">
+        <div class="accordion-body__contents">
+          <p>Welcome back! Follow these steps to log in to your account:</p>
+        </div>
+        <div class="accordion js-accordion">
+          <!-- Accordion for Login (continued) -->
+          <!-- Step 1: Access the Login Page -->
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">
+              <i class="ion-log-in"></i> Step 1: Access the Login Page
+            </div>
+            <div class="accordion-body js-accordion-body">
+              <div class="accordion-body__contents">
+                <p>To access your account on our platform, open your preferred web browser and enter the URL of our
+                  application into the address bar.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Enter Your Email -->
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">
+              <i class="ion-email"></i> Step 2: Enter Your Email
+            </div>
+            <div class="accordion-body js-accordion-body">
+              <div class="accordion-body__contents">
+                <p>Upon reaching the login page, you will encounter a login form, including a field labeled "Email."</p>
+                <p>Input Your Registered Email: In this field, input the email address that you have previously
+                  associated with your account.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Click "Next" -->
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">
+              <i class="ion-arrow-right-b"></i> Step 3: Click "Next"
+            </div>
+            <div class="accordion-body js-accordion-body">
+              <div class="accordion-body__contents">
+                <p>After entering your email, proceed by clicking the "Next" button to initiate the login process.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4: Authenticate Using an Image -->
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">
+              <i class="ion-image"></i> Step 4: Authenticate Using an Image
+            </div>
+            <div class="accordion-body js-accordion-body">
+              <div class="accordion-body__contents">
+                <p>You will be redirected to a page featuring an image as part of our enhanced security measures.</p>
+                <p>Select Three Distinct Points: To complete the authentication process, it is imperative that you
+                  select three specific points on the displayed image.</p>
+                <p>Point Selection: Carefully click on the image at the designated locations as specified in the
+                  instructions. It is crucial to remember the order in which you select these points.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 5: Submit Authentication -->
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">
+              <i class="ion-checkmark-circled"></i> Step 5: Submit Authentication
+            </div>
+            <div class="accordion-body js-accordion-body">
+              <div class="accordion-body__contents">
+                <p>Following the selection of three points on the image, proceed by clicking the "Submit" button.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 6: Access Your Account -->
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">
+              <i class="ion-log-in"></i> Step 6: Access Your Account
+            </div>
+            <div class="accordion-body js-accordion-body">
+              <div class="accordion-body__contents">
+                <p>If you accurately selected the points within the defined criteria, our system will seamlessly
+                  redirect you to your personalized account's homepage.</p>
+                <p>Access Granted: Congratulations! You have successfully logged into your account and are now granted
+                  access to the comprehensive array of features and resources that our platform offers.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Troubleshooting -->
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">
+              <i class="ion-alert-circled"></i> Troubleshooting
+            </div>
+            <div class="accordion-body js-accordion-body">
+              <div class="accordion-body__contents">
+                <p>Incorrect Email: If, by any chance, you input an incorrect email address, our system will promptly
+                  notify you with an error message indicating a mismatch. In such cases, kindly verify the accuracy of
+                  the entered email. If you are new to our platform, you also have the option to initiate the account
+                  creation process.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Step 1: Access the Login Page -->
+
+
+          <!-- Other Steps: Repeat the structure for other steps -->
+
+        </div><!-- End of Sub Accordion -->
+      </div><!-- End of Accordion Body -->
+    </div><!-- End of Accordion Item -->
+
+    <!-- Accordion for Forgot Password -->
+    <div class="accordion__item js-accordion-item">
+      <div class="accordion-header js-accordion-header">
+        <i class="ion-help-circled"></i> Forgot Password
+      </div>
+      <div class="accordion-body js-accordion-body">
+        <div class="accordion-body__contents">
+          <p>Forgot your password? No worries. Follow these steps to reset your password:</p>
+        </div>
+        <div class="accordion js-accordion">
+          <!-- Step 1: Click on "Forgot Password" Link -->
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">
+              <i class="ion-help-circled"></i> Step 1: Click on "Forgot Password" Link
+            </div>
+            <div class="accordion-body js-accordion-body">
+              <div class="accordion-body__contents">
+                <p>If you've forgotten your password, don't worry. Follow these steps to reset it:</p>
+                <p>Start by clicking on the "Forgot Password" link on the login page.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Provide Your Email Address -->
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">
+              <i class="ion-email"></i> Step 2: Provide Your Email Address
+            </div>
+            <div class="accordion-body js-accordion-body">
+              <div class="accordion-body__contents">
+                <p>You'll be redirected to the "Password Reset Request" page.</p>
+                <p>Enter your registered email address into the provided field.</p>
+                <p>Click the "SUBMIT" button to proceed.</p>
+                <p>If your email exists in our system, you'll receive an email with instructions on how to reset your
+                  password.</p>
+                <p>Don't forget to check your inbox and spam folder for this email.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Open the Password Reset Email -->
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">
+              <i class="ion-email-unread"></i> Step 3: Open the Password Reset Email
+            </div>
+            <div class="accordion-body js-accordion-body">
+              <div class="accordion-body__contents">
+                <p>Check your registered email inbox for a message titled "<strong>Password Reset Request</strong>."</p>
+                <p>Open the email to proceed with the password reset process.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4: Click on "Reset Password" Link -->
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">
+              <i class="ion-refresh"></i> Step 4: Click on "Reset Password" Link
+            </div>
+            <div class="accordion-body js-accordion-body">
+              <div class="accordion-body__contents">
+                <p>Inside the email, you'll find a link that says "<strong>Reset Password</strong>." Click on this link
+                  to continue.</p>
+                <p>The link will take you to a secure page for resetting your password.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 5: Upload a Security Image -->
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">
+              <i class="ion-image"></i> Step 5: Upload a Security Image
+            </div>
+            <div class="accordion-body js-accordion-body">
+              <div class="accordion-body__contents">
+                <p>On the reset password page, you will be prompted to upload a security image.</p>
+                <p>Click on the "Choose File" button to select an image file from your device.</p>
+                <p>Ensure that the image you upload is in an accepted format (e.g., JPEG, PNG).</p>
+                <p>After selecting the image, proceed by clicking the "NEXT" button.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 6: Select Three Points on the Image -->
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">
+              <i class="ion-location"></i> Step 6: Select Three Points on the Image
+            </div>
+            <div class="accordion-body js-accordion-body">
+              <div class="accordion-body__contents">
+                <p>Next, you will see the uploaded security image.</p>
+                <p>You must select three specific points on the image in a particular order.</p>
+                <p>Click on the image at the desired locations as instructed. Remember the sequence in which you select
+                  these points.</p>
+                <p>The system will automatically record your selected points.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Step 7: Submit Authentication -->
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">
+              <i class="ion-checkmark-circled"></i> Step 7: Submit Authentication
+            </div>
+            <div class="accordion-body js-accordion-body">
+              <div class="accordion-body__contents">
+                <p>After selecting three points on the image, click the "CREATE" button.</p>
+                <p>If you've correctly selected the points in the specified order, your password will be successfully
+                  reset.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 8: Access Your Account -->
+          <div class="accordion__item js-accordion-item">
+            <div class="accordion-header js-accordion-header">
+              <i class="ion-log-in"></i> Step 8: Access Your Account
+            </div>
+            <div class="accordion-body js-accordion-body">
+              <div class="accordion-body__contents">
+                <p>Upon successful password reset, you will be redirected to the login page.</p>
+                <p>Use your newly reset password to log in to your account.</p>
+                <p>You can now access all the features and services on our platform with your updated credentials.</p>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Other Steps: Repeat the structure for other steps -->
+
+        </div><!-- End of Sub Accordion -->
+      </div><!-- End of Accordion Body -->
+    </div><!-- End of Accordion Item -->
+
+  </div><!-- End of Main Accordion -->
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+
+
+</body>
+
+</html>

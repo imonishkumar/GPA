@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('.static',filename='css/auth-style.css')}}">
+    <link rel="icon" href="{{ url_for('static', filename='images/logo.png') }}" type="image/png">
+    <title>GPA | Sign In</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #3498db, #849c98);
+            font-family: 'Open Sans', sans-serif; /* For headings and body text */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .auth-box {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 80px;
+            height: 220px;
+            width: 430px;
+        }        
+
+        .logoimg {
+            max-width: 50px;
+        }
+
+        .logoname {
+            vertical-align: middle;
+        }
+
+        .auth-box {
+            position: relative;
+        }
+
+        .loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+
+        .form-group {
+            position: relative;
+        }
+
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #3498db;
+            border-radius: 4px;
+            outline: none;
+            font-size: 16px;
+        }
+
+        #submit {
+            background-color: #3498db;
+            color: #fff;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #submit:hover {
+            background-color: #2980b9;
+        }
+
+        .text-danger {
+            color: #e74c3c;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+        <div class="auth-box">
+            <div class="loader">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <form action="/login" method="post">
+                <img src="static/images/logo.png" class="img-fluid logoimg" alt="Logo">
+                <span class="h5 logoname" style="color: #747474;">GPA</span><br><br>
+                <span class="h5">Sign In</span><br>
+                <span id="error" class="text-danger" style="display: none;">Email doesn't match. Try another or <a
+                        href="/signup">sign up</a>.</span>
+                <div class="form-group mt-2">
+                    <input type="email" id="mail" name="ur_email" value="" class="form-control rounded-0 border-dark"
+                        aria-describedby="aiHelp" placeholder="Email" style="border-right: none;border-left: none;border-top: none;">
+                </div>
+
+                <p>Don't have an account yet? <a href="/signup">Sign up now!</a></p>
+                <p>Reset Password <a href="/reset_password_request">Click Here</a></p>
+                <div class="text-right">
+                    <button type="submit" class="btn rounded-0 text-white px-4" id="submit">Next</button>
+                </div>
+            </form>
+        </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the error message element
+            const errorMessage = document.getElementById('error');
+
+            // Get the login form
+            const loginForm = document.querySelector('form[action="/login"]');
+
+            // Add a submit event listener to the form
+            loginForm.addEventListener('submit', function (event) {
+                const emailInput = document.getElementById('mail');
+                const userEmail = emailInput.value.trim(); // Trim to remove leading/trailing spaces
+
+                // Check if the email is empty or invalid (you can add more validation if needed)
+                if (!userEmail || !isValidEmail(userEmail)) {
+                    // Prevent the form submission
+                    event.preventDefault();
+
+                    // Display the error message
+                    errorMessage.style.display = 'block';
+                }
+            });
+
+            // Function to validate email format (you can use a more comprehensive validation function)
+            function isValidEmail(email) {
+                // Basic email validation regex (you can use a more robust one)
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+        });
+    </script>
+</body>
+
+</html>

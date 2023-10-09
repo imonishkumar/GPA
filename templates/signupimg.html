@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="{{ url_for('static', filename='images/logo.png') }}" type="image/png" />
+  <title>GPA | Signup</title>
+  <!-- CSS file -->
+  <link rel="stylesheet" href="{{url_for('.static', filename='css/img-style.css')}}" />
+</head>
+
+<body>
+  <div class="box" id="diiiv1">
+    <div class="loader" style="display: none">
+      <div class="loader-container">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+    </div>
+    <h1>Please select three points over the image.</h1>
+    <p style="margin-left: 38%;">Please remember the order you select the points</p>
+    <h2 style="display: none" id="txt">9</h2>
+    <h2 style="margin-left: 48%;" id="txt1">0</h2>
+    <img id="h" onclick="clickHotspotImage(event);" name="hotspot_image" style="width: 50%; max-width: 800px"
+      src="data:{{ imga.mime }};base64,{{ image_data_base64 }}" alt="Hotspot image" />
+    <form action="/success" method="post">
+      <input style="display: none" type="text" name="xy" id="inp" />
+
+      <button id="sub" type="submit" class="button2">Create</button>
+    </form>
+  </div>
+  <script>
+    var n = 1;
+    var xy = document.getElementById("inp");
+
+    function clickHotspotImage(event) {
+      var xCoordinate = event.offsetX;
+      var yCoordinate = event.offsetY;
+      document.getElementById("txt").innerHTML =
+        xCoordinate + "," + yCoordinate;
+
+      if (n <= 3) {
+        if (n > 1) {
+          xy.value += " "; // Add a space separator if it's not the first coordinate
+        }
+        xy.value += xCoordinate + " " + yCoordinate;
+        document.getElementById("txt1").innerHTML = n; // Display the point number
+        n++;
+      }
+
+      if (n > 3) {
+        document.getElementById("h").classList.add("a");
+      }
+    }
+  </script>
+  <style>
+    /* Add more CSS styles as needed */
+    .a {
+      opacity: 0.3;
+    }
+  </style>
+</body>
+
+</html>
