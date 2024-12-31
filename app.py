@@ -246,5 +246,5 @@ def verify_token(token):
 
 
 if __name__ == "__main__":
-    app.run(debug=True ,port=8888 )
+    app.run(debug=True ,port=5050 )
 
