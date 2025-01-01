@@ -95,7 +95,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-For questions or collaboration opportunities, feel free to contact us mail at monishkumarpecai@gmail.com.
+For questions or collaboration opportunities, feel free to contact us mail monishkumarpecai@gmail.com.
 
 ---
 
